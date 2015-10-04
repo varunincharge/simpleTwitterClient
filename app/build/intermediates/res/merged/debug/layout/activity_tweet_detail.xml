@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/topLayout"
+    android:layout_margin="10dp">
+
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/ivProfilePic"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/material_deep_teal_200"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/tvUsername"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/ivProfilePic"
+        android:layout_toEndOf="@+id/ivProfilePic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/tvTweetBody"
+        android:layout_below="@id/tvUsername"
+        android:layout_toRightOf="@+id/ivProfilePic"
+        android:layout_toEndOf="@+id/ivProfilePic"
+        android:autoLink="all"
+        android:linksClickable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/tvTimestamp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tvTweetBody"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/tvTweetBody"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/tvReply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onReplyUser"
+            android:clickable="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/tvRetweets"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/tvFavorites" />
+
+    </LinearLayout>
+
+    <!-- **********************************************
+      *** Reply
+      *********************************************** -->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:maxLength="140"
+        android:gravity="top|left"
+        android:ems="10"
+        android:id="@+id/etNewTweet"
+        android:layout_below="@+id/llBottom"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:padding="8dp"
+        android:background="#50c5c5c5" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reply"
+        android:id="@+id/btnTweet"
+        android:onClick="onReply"
+        android:layout_below="@+id/etNewTweet"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#81DAF5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/tvCharCount"
+        android:layout_below="@+id/etNewTweet"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp" />
+
+
+
+</RelativeLayout><!-- From: file:/Users/vjobanputra/StudioProjects/MySimpleTweets/app/src/main/res/layout/activity_tweet_detail.xml -->

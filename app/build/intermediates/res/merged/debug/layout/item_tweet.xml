@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:id="@+id/ivProfilePic"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/material_deep_teal_200"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/tvUsername"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/ivProfilePic"
+        android:layout_toEndOf="@+id/ivProfilePic" />
+
+    <com.codepath.apps.mysimpletweets.Utils.LinkifiedTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text                dasdasd asd das asd asdsa dsad "
+        android:id="@+id/tvTweetBody"
+        android:layout_below="@id/tvUsername"
+        android:layout_toRightOf="@+id/ivProfilePic"
+        android:layout_toEndOf="@+id/ivProfilePic"
+        android:autoLink="all"
+        android:linksClickable="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tvTweetBody"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/tvTweetBody"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/tvReply"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/tvRetweets"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/tvFavorites" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/tvTimestamp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="onReply"/>
+
+</RelativeLayout><!-- From: file:/Users/vjobanputra/StudioProjects/MySimpleTweets/app/src/main/res/layout/item_tweet.xml -->
